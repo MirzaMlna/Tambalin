@@ -1,13 +1,12 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unnecessary_import
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 import 'package:flutter/services.dart';
-import 'package:tambalin_app/login_section/phone_verify.dart';
-import 'package:tambalin_app/login_section/sign_up.dart';
-
-import '../custom_widgets/custom_button.dart';
+import 'package:tambalin_app/Auth/phone_verify.dart';
+import 'package:tambalin_app/Utlis/color_pallete.dart';
+import '../Custom/custom_button.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});
@@ -17,9 +16,6 @@ class SignIn extends StatefulWidget {
 }
 
 class _SignInState extends State<SignIn> {
-  Color orangePrimary = Color(0xFFFF8900);
-  Color blackPrimary = Color(0xFF242A37);
-
   @override
   Widget build(BuildContext context) {
     return Sizer(builder: (context, orientation, deviceType) {
@@ -71,24 +67,24 @@ class _SignInState extends State<SignIn> {
                                     children: [
                                       Container(
                                         margin: EdgeInsets.fromLTRB(
-                                            12.0, 12.0, 17.0, 0.0),
+                                            12.0, .0, 17.0, 0.0),
                                         child: Expanded(
                                           child: RichText(
                                             text: TextSpan(
                                               style: GoogleFonts.roboto(
                                                 textStyle: TextStyle(
-                                                  color: blackPrimary,
+                                                  color: tambalinSecondary,
                                                   fontSize: 28.sp,
                                                   fontWeight: FontWeight.w300,
                                                 ),
                                               ),
                                               children: <TextSpan>[
                                                 TextSpan(
-                                                  text: 'Daftar',
-                                                  style: TextStyle(
-                                                    fontWeight: FontWeight.w700,
-                                                  ),
-                                                ),
+                                                    text: 'Daftar',
+                                                    style: TextStyle(
+                                                        fontSize: 36.sp,
+                                                        fontWeight:
+                                                            FontWeight.bold)),
                                                 TextSpan(
                                                   text: ' dengan Nomor Telepon',
                                                 ),
@@ -103,11 +99,11 @@ class _SignInState extends State<SignIn> {
                                       /* Number Input */
                                       TextFormField(
                                         style: GoogleFonts.roboto(),
-                                        cursorColor: orangePrimary,
+                                        cursorColor: tambalinPrimary,
                                         decoration: InputDecoration(
                                             enabledBorder: OutlineInputBorder(
                                               borderRadius:
-                                                  BorderRadius.circular(11.0),
+                                                  BorderRadius.circular(11),
                                               borderSide: BorderSide(
                                                 color:
                                                     Color.fromARGB(10, 0, 0, 0),
@@ -118,7 +114,7 @@ class _SignInState extends State<SignIn> {
                                               borderRadius:
                                                   BorderRadius.circular(11.0),
                                               borderSide: BorderSide(
-                                                  color: orangePrimary,
+                                                  color: tambalinPrimary,
                                                   width: 1.0),
                                             ),
                                             prefixIcon: Container(
@@ -137,25 +133,18 @@ class _SignInState extends State<SignIn> {
                                                 margin: EdgeInsets.all(10.0),
                                                 padding:
                                                     EdgeInsets.only(top: 4.0),
-                                                child: Text(
-                                                  '+62',
-                                                  textAlign: TextAlign.center,
-                                                  style: GoogleFonts.roboto(
-                                                    textStyle: TextStyle(
-                                                      fontWeight:
-                                                          FontWeight.bold,
-                                                      fontSize: 17.0,
-                                                    ),
-                                                  ),
-                                                ),
+                                                child: Text('+62',
+                                                    textAlign: TextAlign.center,
+                                                    style: TextStyle(
+                                                        fontSize: 17.sp,
+                                                        fontWeight:
+                                                            FontWeight.bold)),
                                               ),
                                             ),
                                             hintText: 'Nomor Telepon',
-                                            hintStyle: GoogleFonts.roboto(
-                                              textStyle: TextStyle(
-                                                  color: Colors.grey[400],
-                                                  fontSize: 17.0),
-                                            )),
+                                            hintStyle: TextStyle(
+                                                color: Colors.grey,
+                                                fontSize: 17.sp)),
                                         keyboardType: TextInputType.number,
                                         inputFormatters: <TextInputFormatter>[
                                           FilteringTextInputFormatter.digitsOnly
@@ -167,14 +156,14 @@ class _SignInState extends State<SignIn> {
                                       ),
                                       /* Button */
                                       CustomButton(
-                                          color: blackPrimary,
+                                          color: tambalinSecondary,
                                           text: 'SELANJUTNYA',
                                           onTap: () {
-                                            Navigator.pushReplacement(context,
+                                            Navigator.push(context,
                                                 MaterialPageRoute(
-                                                    builder: ((context) {
+                                                    builder: (context) {
                                               return PhoneVerify();
-                                            })));
+                                            }));
                                           }),
                                       /* Last of Button */
                                     ],
@@ -183,38 +172,6 @@ class _SignInState extends State<SignIn> {
                               ]),
                         ),
                       ),
-                      SizedBox(
-                        height: 5.h,
-                      ),
-                      Align(
-                        alignment: FractionalOffset.bottomCenter,
-                        child: RichText(
-                          text: TextSpan(
-                            children: [
-                              TextSpan(
-                                text: 'Belum mempunyai akun? ',
-                                style: GoogleFonts.roboto(
-                                    textStyle: TextStyle(color: blackPrimary)),
-                              ),
-                              TextSpan(
-                                text: 'Daftar',
-                                style: GoogleFonts.roboto(
-                                  textStyle: TextStyle(
-                                      color: blackPrimary,
-                                      fontWeight: FontWeight.bold),
-                                ),
-                                recognizer: TapGestureRecognizer()
-                                  ..onTap = () {
-                                    Navigator.pushReplacement(context,
-                                        MaterialPageRoute(builder: (context) {
-                                      return SignUp();
-                                    }));
-                                  },
-                              ),
-                            ],
-                          ),
-                        ),
-                      )
                     ],
                   ),
                 ),
