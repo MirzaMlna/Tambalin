@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unused_local_variable
+
 
 import 'package:flutter/material.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
@@ -40,7 +40,7 @@ class _PhoneVerifyState extends State<PhoneVerify> {
                 Container(
                   width: 80.h,
                   height: 20.h,
-                  margin: EdgeInsets.all(25.0),
+                  margin: const EdgeInsets.all(25.0),
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -60,15 +60,17 @@ class _PhoneVerifyState extends State<PhoneVerify> {
                 VerificationCode(
                   textStyle: GoogleFonts.roboto(
                     textStyle: TextStyle(
-                      fontSize: 37.sp,
+                      fontSize: 27.sp,
                       fontWeight: FontWeight.bold,
                     ),
                   ),
                   keyboardType: TextInputType.number,
+                  underlineUnfocusedColor: Colors.grey[200],
                   underlineColor: tambalinPrimary,
+                  underlineWidth: 1.w,
                   length: 4,
-                  cursorColor: tambalinSecondary,
-                  margin: EdgeInsets.all(20.0),
+                  cursorColor: tambalinPrimary,
+                  margin: const EdgeInsets.all(20.0),
                   onCompleted: (String value) {
                     setState(() {});
                   },
@@ -88,7 +90,7 @@ class _PhoneVerifyState extends State<PhoneVerify> {
                     onTap: () {
                       Navigator.pushReplacement(context,
                           MaterialPageRoute(builder: (context) {
-                        return MainPage();
+                        return const MainPage();
                       }));
                     })
               ],

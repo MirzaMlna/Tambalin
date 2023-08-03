@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, unnecessary_import
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
@@ -35,7 +33,7 @@ class _SignInState extends State<SignIn> {
                   ),
                 ),
                 Container(
-                  margin: EdgeInsets.all(20.0),
+                  margin: const EdgeInsets.all(20.0),
                   child: Column(
                     children: [
                       SizedBox(
@@ -52,28 +50,27 @@ class _SignInState extends State<SignIn> {
                               color: Colors.black26.withOpacity(0.3),
                               spreadRadius: 0,
                               blurRadius: 5,
-                              offset: Offset(0, 0),
+                              offset: const Offset(0, 0),
                             ),
                           ],
                         ),
-                        /* Email Input */
                         child: Center(
                           child: Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Container(
-                                  margin: EdgeInsets.all(25.0),
+                                  margin: const EdgeInsets.all(25.0),
                                   child: Column(
                                     children: [
                                       Container(
-                                        margin: EdgeInsets.fromLTRB(
+                                        margin: const EdgeInsets.fromLTRB(
                                             12.0, .0, 17.0, 0.0),
                                         child: Expanded(
                                           child: RichText(
                                             text: TextSpan(
                                               style: GoogleFonts.roboto(
                                                 textStyle: TextStyle(
-                                                  color: tambalinSecondary,
+                                                  color: tambalinBlack,
                                                   fontSize: 28.sp,
                                                   fontWeight: FontWeight.w300,
                                                 ),
@@ -85,7 +82,7 @@ class _SignInState extends State<SignIn> {
                                                         fontSize: 36.sp,
                                                         fontWeight:
                                                             FontWeight.bold)),
-                                                TextSpan(
+                                                const TextSpan(
                                                   text: ' dengan Nomor Telepon',
                                                 ),
                                               ],
@@ -98,71 +95,83 @@ class _SignInState extends State<SignIn> {
                                       ),
                                       /* Number Input */
                                       TextFormField(
-                                        style: GoogleFonts.roboto(),
+                                        style: TextStyle(
+                                          fontSize: 15.sp,
+                                        ),
                                         cursorColor: tambalinPrimary,
+                                        maxLength:
+                                            12, // Set the maximum length to 12 digits
                                         decoration: InputDecoration(
-                                            enabledBorder: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(11),
-                                              borderSide: BorderSide(
-                                                color:
-                                                    Color.fromARGB(10, 0, 0, 0),
-                                                width: 2.0,
-                                              ),
+                                          enabledBorder: OutlineInputBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(11),
+                                            borderSide: const BorderSide(
+                                              color:
+                                                  Color.fromARGB(10, 0, 0, 0),
+                                              width: 2.0,
                                             ),
-                                            focusedBorder: OutlineInputBorder(
-                                              borderRadius:
-                                                  BorderRadius.circular(11.0),
-                                              borderSide: BorderSide(
-                                                  color: tambalinPrimary,
-                                                  width: 1.0),
+                                          ),
+                                          focusedBorder: OutlineInputBorder(
+                                            borderRadius:
+                                                BorderRadius.circular(11.0),
+                                            borderSide: const BorderSide(
+                                              color: tambalinPrimary,
+                                              width: 1.0,
                                             ),
-                                            prefixIcon: Container(
-                                              margin:
-                                                  EdgeInsets.only(right: 15.0),
-                                              decoration: BoxDecoration(
-                                                border: Border(
-                                                  right: BorderSide(
-                                                    color: Color.fromARGB(
-                                                        10, 0, 0, 0),
-                                                    width: 2.0,
-                                                  ),
+                                          ),
+                                          prefixIcon: Container(
+                                            margin: const EdgeInsets.only(
+                                                right: 15.0),
+                                            decoration: const BoxDecoration(
+                                              border: Border(
+                                                right: BorderSide(
+                                                  color: Color.fromARGB(
+                                                      10, 0, 0, 0),
+                                                  width: 2.0,
                                                 ),
                                               ),
-                                              child: Container(
-                                                margin: EdgeInsets.all(10.0),
-                                                padding:
-                                                    EdgeInsets.only(top: 4.0),
-                                                child: Text('+62',
-                                                    textAlign: TextAlign.center,
-                                                    style: TextStyle(
-                                                        fontSize: 17.sp,
-                                                        fontWeight:
-                                                            FontWeight.bold)),
+                                            ),
+                                            child: Container(
+                                              margin:
+                                                  const EdgeInsets.all(10.0),
+                                              padding: const EdgeInsets.only(
+                                                  top: 4.0),
+                                              child: Text(
+                                                '+62',
+                                                textAlign: TextAlign.center,
+                                                style: TextStyle(
+                                                  fontSize: 17.sp,
+                                                  fontWeight: FontWeight.bold,
+                                                ),
                                               ),
                                             ),
-                                            hintText: 'Nomor Telepon',
-                                            hintStyle: TextStyle(
-                                                color: Colors.grey,
-                                                fontSize: 17.sp)),
+                                          ),
+                                          hintText: '1234567890',
+                                          hintStyle: TextStyle(
+                                            color: Colors.grey,
+                                            fontSize: 15.sp,
+                                          ),
+                                        ),
                                         keyboardType: TextInputType.number,
                                         inputFormatters: <TextInputFormatter>[
-                                          FilteringTextInputFormatter.digitsOnly
+                                          FilteringTextInputFormatter
+                                              .digitsOnly,
                                         ],
                                       ),
+
                                       /* Last of Number Input */
                                       SizedBox(
                                         height: 5.h,
                                       ),
                                       /* Button */
                                       CustomButton(
-                                          color: tambalinSecondary,
+                                          color: tambalinBlack,
                                           text: 'SELANJUTNYA',
                                           onTap: () {
                                             Navigator.push(context,
                                                 MaterialPageRoute(
                                                     builder: (context) {
-                                              return PhoneVerify();
+                                              return const PhoneVerify();
                                             }));
                                           }),
                                       /* Last of Button */

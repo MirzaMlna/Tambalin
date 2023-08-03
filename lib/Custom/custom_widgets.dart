@@ -1,20 +1,21 @@
-// ignore_for_file: prefer_const_constructors
+
 
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+import 'package:tambalin_app/Utlis/color_pallete.dart';
 
-import '../Utlis/color_pallete.dart';
+import '../Utlis/tambalin_icons.dart';
 
 Widget whenOnline = Row(
   children: [
     Container(
       width: 12.w,
       height: 12.w,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         shape: BoxShape.circle,
         color: Colors.white,
       ),
-      margin: EdgeInsets.only(left: 25.0),
+      margin: const EdgeInsets.only(left: 25.0),
       child: Icon(
         Icons.online_prediction_rounded,
         size: 25.sp,
@@ -29,7 +30,7 @@ Widget whenOnline = Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Anda sedang Online',
+          'Kamu sedang Online',
           style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
@@ -44,24 +45,21 @@ Widget whenOnline = Row(
   ],
 );
 
+//When Offline
 Widget whenOffline = Row(
   children: [
     Container(
       width: 12.w,
       height: 12.w,
-      decoration: BoxDecoration(
+      decoration: const BoxDecoration(
         shape: BoxShape.circle,
         color: Colors.white,
       ),
-      margin: EdgeInsets.only(left: 25.0),
-      child: Transform(
-        alignment: Alignment.center,
-        transform: Matrix4.rotationZ(300 * 3.1415927 / 180),
-        child: Icon(
-          Icons.nightlight,
-          size: 25.sp,
-          color: tambalinPrimary,
-        ),
+      margin: const EdgeInsets.only(left: 25.0),
+      child: Icon(
+        Tambalin.moon,
+        color: tambalinBlack,
+        size: 30.sp,
       ),
     ),
     SizedBox(
@@ -72,7 +70,7 @@ Widget whenOffline = Row(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Anda Sedang Offline',
+          'Kamu Sedang Offline',
           style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
