@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
 import 'package:tambalin_app/Custom/custom_button.dart';
+import 'package:tambalin_app/Order/order_screen.dart';
 import 'package:tambalin_app/Settings/settings_page.dart';
 import 'package:tambalin_app/Utlis/color_pallete.dart';
 import 'package:tambalin_app/Custom/custom_widgets.dart';
@@ -221,8 +222,8 @@ class _MainPageState extends State<MainPage> {
                       ),
                       Positioned(
                           bottom: 10.0,
-                          right: 60.0,
-                          left: 60.0,
+                          right: 40.0,
+                          left: 40.0,
                           child: SizedBox(
                             width: 20.w,
                             child: CustomButton(
@@ -234,6 +235,22 @@ class _MainPageState extends State<MainPage> {
                                   setState(() {
                                     isOnline = !isOnline;
                                   });
+                                }),
+                          )),
+                      Positioned(
+                          top: 10.0,
+                          right: 40.0,
+                          left: 40.0,
+                          child: SizedBox(
+                            width: 20.w,
+                            child: CustomButton(
+                                color: isOnline ? Colors.red : Colors.green,
+                                text: 'Tampilan Seakan akan ada orderan ngab',
+                                onTap: () {
+                                  Navigator.push(context,
+                                      MaterialPageRoute(builder: ((context) {
+                                    return OrderScreen();
+                                  })));
                                 }),
                           )),
                       Positioned(

@@ -114,7 +114,6 @@ class _SettingsPageState extends State<SettingsPage> {
               }).toList(),
             ),
             SettingsSection(
-              title: const SizedBox(height: 0),
               tiles: settingItems.sublist(3, 6).map((item) {
                 return SettingsTile(
                   leading: Container(
