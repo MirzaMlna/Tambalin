@@ -2,13 +2,13 @@
 
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-import 'package:tambalin_app/Custom/custom_button.dart';
-import 'package:tambalin_app/Order/order_screen.dart';
-import 'package:tambalin_app/Settings/settings_page.dart';
-import 'package:tambalin_app/Utlis/color_pallete.dart';
-import 'package:tambalin_app/Custom/custom_widgets.dart';
+import 'package:tambalin_app/common_widgets/custom_button.dart';
+import 'package:tambalin_app/order_pages/order_screen.dart';
+import 'package:tambalin_app/setting_pages/settings_page.dart';
+import 'package:tambalin_app/utlis/color_pallete.dart';
+import 'package:tambalin_app/main_pages/onilne_offline_widget.dart';
 
-import '../Utlis/tambalin_icons.dart';
+import '../utlis/tambalin_icons.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({super.key});

@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
-import 'package:tambalin_app/Custom/custom_button.dart';
-import 'package:tambalin_app/Utlis/color_pallete.dart';
-import 'package:tambalin_app/Utlis/tambalin_icons.dart';
+import 'package:tambalin_app/common_widgets/custom_button.dart';
+import 'package:tambalin_app/utlis/color_pallete.dart';
+import 'package:tambalin_app/utlis/tambalin_icons.dart';
 
 class OrderScreen extends StatefulWidget {
   const OrderScreen({super.key});
@@ -22,7 +22,7 @@ class _OrderScreenState extends State<OrderScreen> {
           elevation: 0.0,
           title: const Center(
             child: Text(
-              'Ada Pesanan Nih !',
+              'PESANAN MASUK',
               style: TextStyle(color: tambalinPrimary),
             ),
           ),

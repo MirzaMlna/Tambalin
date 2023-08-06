@@ -3,7 +3,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tambalin_app/Auth/sign_in.dart';
+import 'package:tambalin_app/auth_pages/sign_in.dart';
 
 void main() {
   runApp(const MyApp());

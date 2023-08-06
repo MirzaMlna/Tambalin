@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:settings_ui/settings_ui.dart';
 import 'package:sizer/sizer.dart';
-import 'package:tambalin_app/Settings/My_Account/my_account_page.dart';
-import 'package:tambalin_app/Settings/separated_index.dart';
-import 'package:tambalin_app/Utlis/color_pallete.dart';
+import 'package:tambalin_app/setting_pages/my_account_pages/my_account_page.dart';
+import 'package:tambalin_app/setting_pages/separated_index.dart';
+import 'package:tambalin_app/utlis/color_pallete.dart';
 
 class SettingsPage extends StatefulWidget {
   const SettingsPage({Key? key}) : super(key: key);

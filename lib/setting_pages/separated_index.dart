@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:tambalin_app/Settings/settings_page.dart';
-import 'package:tambalin_app/Utlis/tambalin_icons.dart';
+import 'package:tambalin_app/setting_pages/settings_page.dart';
+import 'package:tambalin_app/utlis/tambalin_icons.dart';
 
 class Settings {
   Color? color;

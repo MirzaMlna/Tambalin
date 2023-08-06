@@ -2,9 +2,9 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:sizer/sizer.dart';
 import 'package:flutter/services.dart';
-import 'package:tambalin_app/Auth/phone_verify.dart';
-import 'package:tambalin_app/Utlis/color_pallete.dart';
-import '../Custom/custom_button.dart';
+import 'package:tambalin_app/auth_pages/phone_verify.dart';
+import 'package:tambalin_app/utlis/color_pallete.dart';
+import '../common_widgets/custom_button.dart';
 
 class SignIn extends StatefulWidget {
   const SignIn({super.key});
@@ -135,7 +135,7 @@ class _SignInState extends State<SignIn> {
                                               margin:
                                                   const EdgeInsets.all(10.0),
                                               padding: const EdgeInsets.only(
-                                                  top: 4.0),
+                                                  top: 2.0),
                                               child: Text(
                                                 '+62',
                                                 textAlign: TextAlign.center,
