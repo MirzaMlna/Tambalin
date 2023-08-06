@@ -210,7 +210,7 @@ class _MainPageState extends State<MainPage> {
                       color: isOnline ? tambalinPrimary : tambalinBlack,
                       child: isOnline
                           ? whenOnline
-                          : whenOffline), // Location = custom_widgets.dart
+                          : whenOffline),
                   Stack(
                     children: [
                       Container(

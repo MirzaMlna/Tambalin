@@ -16,9 +16,10 @@ class _OrderScreenState extends State<OrderScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.white,
-        elevation: 0.0,
+        elevation: 0,
         title: const Center(
           child: Text(
             'PESANAN MASUK',
@@ -28,49 +29,52 @@ class _OrderScreenState extends State<OrderScreen> {
       ),
       body: Column(
         children: [
-          Row(
-            children: [
-              Container(
-                margin: const EdgeInsets.all(20),
-                width: 12.w,
-                height: 5.5.h,
-                decoration: BoxDecoration(
-                  color: Colors.black26,
-                  borderRadius: BorderRadius.circular(11.0),
-                ),
-                child: const Icon(
-                  Icons.person,
-                  color: Colors.white,
-                ),
-              ),
-              Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Text(
-                    'Mirza Otsutsuki',
-                    style: TextStyle(
-                        fontSize: 17.sp,
-                        fontWeight: FontWeight.w600,
-                        color: Colors.black),
+          Container(
+            color: const Color(0xFFF7F7F7),
+            child: Row(
+              children: [
+                Container(
+                  margin: const EdgeInsets.all(20),
+                  width: 12.w,
+                  height: 5.5.h,
+                  decoration: BoxDecoration(
+                    color: Colors.black26,
+                    borderRadius: BorderRadius.circular(11.0),
                   ),
-                  Container(
-                    width: 20.w,
-                    padding: const EdgeInsets.all(3.0),
-                    margin: const EdgeInsets.only(top: 4.0),
-                    decoration: const BoxDecoration(
-                      color: tambalinPrimary,
-                      borderRadius:
-                          BorderRadius.all(Radius.elliptical(80, 100)),
-                    ),
-                    child: Text(
-                      'Motor',
-                      style: TextStyle(fontSize: 12.sp, color: Colors.white),
-                      textAlign: TextAlign.center,
-                    ),
+                  child: const Icon(
+                    Icons.person,
+                    color: Colors.white,
                   ),
-                ],
-              )
-            ],
+                ),
+                Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      'Mirza Otsutsuki',
+                      style: TextStyle(
+                          fontSize: 17.sp,
+                          fontWeight: FontWeight.w600,
+                          color: Colors.black),
+                    ),
+                    Container(
+                      width: 20.w,
+                      padding: const EdgeInsets.all(3.0),
+                      margin: const EdgeInsets.only(top: 4.0),
+                      decoration: const BoxDecoration(
+                        color: tambalinPrimary,
+                        borderRadius:
+                            BorderRadius.all(Radius.elliptical(80, 100)),
+                      ),
+                      child: Text(
+                        'Motor',
+                        style: TextStyle(fontSize: 12.sp, color: Colors.white),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ],
+                )
+              ],
+            ),
           ),
           Divider(
             thickness: 1,
@@ -107,7 +111,7 @@ class _OrderScreenState extends State<OrderScreen> {
             color: Colors.grey[100],
           ),
           SizedBox(
-            height: 25.h,
+            height: 20.h,
           ),
           CustomButton(
               color: tambalinPrimary,
@@ -132,7 +136,6 @@ class _OrderScreenState extends State<OrderScreen> {
     );
   }
 }
-
 
 class OrderScreenList extends StatelessWidget {
   final String title;
@@ -160,12 +163,15 @@ class OrderScreenList extends StatelessWidget {
             color: iconColor,
             size: 25.sp,
           ),
-          title: Text(
-            subtitle.toUpperCase(),
-            style: TextStyle(
-                color: Colors.black26,
-                fontSize: 12.sp,
-                fontWeight: FontWeight.bold),
+          title: Container(
+            margin: const EdgeInsets.only(top: 10, bottom: 10),
+            child: Text(
+              subtitle.toUpperCase(),
+              style: TextStyle(
+                  color: Colors.black26,
+                  fontSize: 12.sp,
+                  fontWeight: FontWeight.bold),
+            ),
           ),
           subtitle: Text(title,
               style: TextStyle(
