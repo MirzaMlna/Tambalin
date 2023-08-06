@@ -103,15 +103,15 @@ class _MyAccountState extends State<MyAccount> {
                         fontWeight: FontWeight.w600,
                         color: Colors.grey),
                   )),
-              MyAccountList(
+              const MyAccountList(
                   title: 'Nama Lengkap', subtitle: 'Uchiha Randa'),
-              MyAccountList(
+              const MyAccountList(
                   title: 'Nomor Telepon', subtitle: '08582777387'),
-              MyAccountList(
+              const MyAccountList(
                   title: 'Email', subtitle: 'name@example.gmail.com'),
-              MyAccountList(
+              const MyAccountList(
                   title: 'Alamat Toko', subtitle: 'Saturnus'),
-              MyAccountList(
+              const MyAccountList(
                   title: 'Tanggal Lahir', subtitle: 'April 12, 1999'),
             ],
           ),
@@ -121,12 +121,12 @@ class _MyAccountState extends State<MyAccount> {
   
 }
 
-// ignore: must_be_immutable
-class MyAccountList extends StatelessWidget {
-  String title;
-  String subtitle;
 
-  MyAccountList({
+class MyAccountList extends StatelessWidget {
+  final String title;
+  final String subtitle;
+
+  const MyAccountList({
     required this.title,
     required this.subtitle,
     super.key,

@@ -77,25 +77,25 @@ class _OrderScreenState extends State<OrderScreen> {
             height: 0,
             color: Colors.grey[100],
           ),
-          OrderScreenList(
+          const OrderScreenList(
             title: 'Komplek Purnama Permai 1 Jalur 2 No 12',
             subtitle: 'Lokasi Anda',
             iconColor: tambalinPrimary,
             icon: Tambalin.location,
           ),
-          OrderScreenList(
+          const OrderScreenList(
             title: 'Komplek Perdana Mandiri',
             subtitle: 'Lokasi Tujuan',
             iconColor: tambalinSecondary,
             icon: Tambalin.location,
           ),
-          OrderScreenList(
+          const OrderScreenList(
             title: '20.000',
             subtitle: 'Ongkos Perjalanan',
             iconColor: tambalinPrimary,
             icon: Tambalin.money,
           ),
-          OrderScreenList(
+          const OrderScreenList(
             title: '2,5 KM',
             subtitle: 'Jarak',
             iconColor: tambalinPrimary,
@@ -133,14 +133,14 @@ class _OrderScreenState extends State<OrderScreen> {
   }
 }
 
-// ignore: must_be_immutable
-class OrderScreenList extends StatelessWidget {
-  String title;
-  String subtitle;
-  Color? iconColor;
-  IconData icon;
 
-  OrderScreenList({
+class OrderScreenList extends StatelessWidget {
+  final String title;
+  final String subtitle;
+  final Color? iconColor;
+  final IconData icon;
+
+  const OrderScreenList({
     required this.title,
     required this.subtitle,
     required this.iconColor,

@@ -119,13 +119,13 @@ class _MyAccountEditState extends State<MyAccountEdit> {
               SizedBox(
                 height: 5.h,
               ),
-              MyAccountList(
+              const MyAccountList(
                   title: 'Nomor Telepon', subtitle: '08582777387'),
-              MyAccountList(
+              const MyAccountList(
                   title: 'Email', subtitle: 'name@example.gmail.com'),
-              MyAccountList(
+              const MyAccountList(
                   title: 'Alamat Toko', subtitle: 'Saturnus'),
-              MyAccountList(
+              const MyAccountList(
                   title: 'Tanggal Lahir', subtitle: 'April 12, 1999'),
             ],
           ),
