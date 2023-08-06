@@ -22,9 +22,7 @@ class _MainPageState extends State<MainPage> {
 
   @override
   Widget build(BuildContext context) {
-    return Sizer(builder: (context, orientation, deviceType) {
-      return MaterialApp(
-          home: Scaffold(
+          return Scaffold(
               appBar: AppBar(
                 elevation: 0.0,
                 backgroundColor: Colors.white,
@@ -182,10 +180,10 @@ class _MainPageState extends State<MainPage> {
                             fontWeight: FontWeight.w600, fontSize: 15.sp),
                       ),
                       onTap: () {
-                        Navigator.push(context,
-                            MaterialPageRoute(builder: (context) {
-                          return SettingsPage();
-                        }));
+                        Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: ((context) => const SettingsPage())));
                       },
                     ),
                     ListTile(
@@ -247,10 +245,10 @@ class _MainPageState extends State<MainPage> {
                                 color: isOnline ? Colors.red : Colors.green,
                                 text: 'Tampilan Seakan akan ada orderan ngab',
                                 onTap: () {
-                                  Navigator.push(context,
-                                      MaterialPageRoute(builder: ((context) {
-                                    return OrderScreen();
-                                  })));
+                                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: ((context) => const OrderScreen())));
                                 }),
                           )),
                       Positioned(
@@ -410,7 +408,7 @@ class _MainPageState extends State<MainPage> {
                     ),
                   ],
                 ),
-              )));
-    });
+              ));
+    }
   }
-}
+

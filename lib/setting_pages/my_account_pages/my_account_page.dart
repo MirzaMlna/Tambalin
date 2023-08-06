@@ -15,9 +15,8 @@ class _MyAccountState extends State<MyAccount> {
 
 
   @override
-  Widget build(BuildContext context) {
-    return Sizer(builder: (context, orientation, deviceType) {
-      return Scaffold(
+  Widget build(BuildContext context) {  
+      return  Scaffold(
         backgroundColor: const Color(0xFFF7F8FA),
         appBar: AppBar(
           elevation: 0.0,
@@ -104,30 +103,30 @@ class _MyAccountState extends State<MyAccount> {
                         fontWeight: FontWeight.w600,
                         color: Colors.grey),
                   )),
-              CustomListForMyAccount(
+              MyAccountList(
                   title: 'Nama Lengkap', subtitle: 'Uchiha Randa'),
-              CustomListForMyAccount(
+              MyAccountList(
                   title: 'Nomor Telepon', subtitle: '08582777387'),
-              CustomListForMyAccount(
+              MyAccountList(
                   title: 'Email', subtitle: 'name@example.gmail.com'),
-              CustomListForMyAccount(
+              MyAccountList(
                   title: 'Alamat Toko', subtitle: 'Saturnus'),
-              CustomListForMyAccount(
+              MyAccountList(
                   title: 'Tanggal Lahir', subtitle: 'April 12, 1999'),
             ],
           ),
         ),
       );
-    });
-  }
+    }
+  
 }
 
 // ignore: must_be_immutable
-class CustomListForMyAccount extends StatelessWidget {
+class MyAccountList extends StatelessWidget {
   String title;
   String subtitle;
 
-  CustomListForMyAccount({
+  MyAccountList({
     required this.title,
     required this.subtitle,
     super.key,

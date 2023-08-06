@@ -15,7 +15,7 @@ class SettingsPage extends StatefulWidget {
 class _SettingsPageState extends State<SettingsPage> {
   @override
   Widget build(BuildContext context) {
-    return Sizer(builder: (context, orientation, deviceType) {
+    
       return Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.white,
@@ -140,10 +140,10 @@ class _SettingsPageState extends State<SettingsPage> {
                     color: Colors.grey,
                   ),
                   onPressed: (BuildContext context) {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) {
-                      return item.location;
-                    }));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => item.location)));
                   },
                 );
               }).toList(),
@@ -151,6 +151,6 @@ class _SettingsPageState extends State<SettingsPage> {
           ],
         ),
       );
-    });
+    }
   }
-}
+

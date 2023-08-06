@@ -13,7 +13,8 @@ class MyAccountEdit extends StatefulWidget {
 class _MyAccountEditState extends State<MyAccountEdit> {
   @override
   Widget build(BuildContext context) {
-    return Sizer(builder: (context, orientation, deviceType) {
+  
+      
       return Scaffold(
         backgroundColor: const Color(0xFFF7F8FA),
         appBar: AppBar(
@@ -118,18 +119,18 @@ class _MyAccountEditState extends State<MyAccountEdit> {
               SizedBox(
                 height: 5.h,
               ),
-              CustomListForMyAccount(
+              MyAccountList(
                   title: 'Nomor Telepon', subtitle: '08582777387'),
-              CustomListForMyAccount(
+              MyAccountList(
                   title: 'Email', subtitle: 'name@example.gmail.com'),
-              CustomListForMyAccount(
+              MyAccountList(
                   title: 'Alamat Toko', subtitle: 'Saturnus'),
-              CustomListForMyAccount(
+              MyAccountList(
                   title: 'Tanggal Lahir', subtitle: 'April 12, 1999'),
             ],
           ),
         ),
       );
-    });
+    }
   }
-}
+
