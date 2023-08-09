@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sizer/sizer.dart';
+import 'package:tambalin_app/common_widgets/custom_button.dart';
 import 'package:tambalin_app/utlis/color_pallete.dart';
 import 'package:tambalin_app/utlis/tambalin_icons.dart';
 
@@ -191,7 +192,57 @@ class _OrderReceivedState extends State<OrderReceived> {
                       color: tambalinPrimary,
                       size: 17,
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      showDialog(
+                        context: context,
+                        builder: (BuildContext context) {
+                          return AlertDialog(
+                            scrollable: true,
+                            title: const Center(
+                                child: Text(
+                              'APA ITU ESTIMASI?',
+                              style: TextStyle(fontWeight: FontWeight.bold),
+                            )),
+                            content: Column(
+                              children: [
+                                RichText(
+                                    textAlign: TextAlign.center,
+                                    text: const TextSpan(children: <TextSpan>[
+                                      TextSpan(
+                                        text: 'Estimasi Biaya adalah ',
+                                        style: TextStyle(
+                                            fontSize: 14, color: Colors.black),
+                                      ),
+                                      TextSpan(
+                                        text: 'Perkiraan Biaya',
+                                        style: TextStyle(
+                                            fontSize: 14,
+                                            fontWeight: FontWeight.bold,
+                                            color: Colors.black),
+                                      ),
+                                      TextSpan(
+                                        text:
+                                            ' yang di bayarkan untuk perbaikan. Biaya perbaikan tegantung dari banyaknya lubang yang diperbaiki',
+                                        style: TextStyle(
+                                            fontSize: 14, color: Colors.black),
+                                      ),
+                                    ])),
+                                Container(
+                                  margin: const EdgeInsets.only(top: 10),
+                                  height: 5.h,
+                                  child: CustomButton(
+                                      color: tambalinPrimary,
+                                      text: 'Paham',
+                                      onTap: () {
+                                        Navigator.pop(context);
+                                      }),
+                                )
+                              ],
+                            ),
+                          );
+                        },
+                      );
+                    },
                   )
                 ],
               ),
@@ -371,16 +422,14 @@ class _OrderReceivedState extends State<OrderReceived> {
       bottomNavigationBar: Material(
         color: const Color(0xffff8906),
         child: InkWell(
-          onTap: () {
-            //print('called on tap');
-          },
+          onTap: () {},
           child: SizedBox(
             height: 12.h,
             width: double.infinity,
             child: Center(
               child: Text(
                 'MENUJU LOKASI',
-                style: TextStyle( 
+                style: TextStyle(
                     fontWeight: FontWeight.bold,
                     color: Colors.white,
                     fontSize: 17.sp),
