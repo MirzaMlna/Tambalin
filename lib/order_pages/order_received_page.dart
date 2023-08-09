@@ -368,7 +368,27 @@ class _OrderReceivedState extends State<OrderReceived> {
           ),
         ],
       ),
-      
+      bottomNavigationBar: Material(
+        color: const Color(0xffff8906),
+        child: InkWell(
+          onTap: () {
+            //print('called on tap');
+          },
+          child: SizedBox(
+            height: 12.h,
+            width: double.infinity,
+            child: Center(
+              child: Text(
+                'MENUJU LOKASI',
+                style: TextStyle( 
+                    fontWeight: FontWeight.bold,
+                    color: Colors.white,
+                    fontSize: 17.sp),
+              ),
+            ),
+          ),
+        ),
+      ),
     );
   }
 }
