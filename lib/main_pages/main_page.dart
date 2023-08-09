@@ -243,7 +243,7 @@ class _MainPageState extends State<MainPage> {
                             width: 20.w,
                             child: CustomButton(
                                 color: isOnline ? Colors.red : Colors.green,
-                                text: 'Tampilan Seakan akan ada orderan ngab',
+                                text: 'Order Page Here ',
                                 onTap: () {
                                   Navigator.push(
                       context,
