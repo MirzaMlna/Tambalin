@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:tambalin_app/setting_pages/my_account_pages/my_account_page.dart';
 import 'package:tambalin_app/utlis/color_pallete.dart';
 

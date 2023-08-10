@@ -1,7 +1,7 @@
 // ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
 
 import 'package:flutter/material.dart';
-import 'package:sizer/sizer.dart';
+import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:tambalin_app/common_widgets/custom_button.dart';
 import 'package:tambalin_app/order_pages/order_screen.dart';
 import 'package:tambalin_app/setting_pages/settings_page.dart';
