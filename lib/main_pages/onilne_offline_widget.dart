@@ -1,5 +1,3 @@
-
-
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:tambalin_app/utlis/color_pallete.dart';
@@ -34,11 +32,11 @@ Widget whenOnline = Row(
           style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
-              fontSize: 17.sp),
+              fontSize: 20.sp),
         ),
         Text(
           'Menunggu Orderan !',
-          style: TextStyle(color: Colors.white, fontSize: 12.sp),
+          style: TextStyle(color: Colors.white, fontSize: 15.sp),
         )
       ],
     )
@@ -59,7 +57,7 @@ Widget whenOffline = Row(
       child: Icon(
         Tambalin.moon,
         color: tambalinBlack,
-        size: 30.sp,
+        size: 25.sp,
       ),
     ),
     SizedBox(
@@ -74,11 +72,11 @@ Widget whenOffline = Row(
           style: TextStyle(
               color: Colors.white,
               fontWeight: FontWeight.bold,
-              fontSize: 17.sp),
+              fontSize: 20.sp),
         ),
         Text(
           'Koneksikan Internet Untuk Memulai !',
-          style: TextStyle(color: Colors.white, fontSize: 12.sp),
+          style: TextStyle(color: Colors.white, fontSize: 15.sp),
         )
       ],
     )
