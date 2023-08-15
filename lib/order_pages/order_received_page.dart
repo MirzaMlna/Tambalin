@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:tambalin_app/common_widgets/custom_button.dart';
+import 'package:tambalin_app/order_pages/chat/order_roomchat.dart';
 import 'package:tambalin_app/utlis/color_pallete.dart';
 import 'package:tambalin_app/utlis/tambalin_icons.dart';
 
@@ -53,9 +54,10 @@ class _OrderReceivedState extends State<OrderReceived> {
                   color: Colors.black26,
                   borderRadius: BorderRadius.circular(11.0),
                 ),
-                child: const Icon(
+                child: Icon(
                   Icons.person,
                   color: Colors.white,
+                  size: 25.sp,
                 ),
               ),
               Column(
@@ -64,7 +66,7 @@ class _OrderReceivedState extends State<OrderReceived> {
                   Text(
                     'Mirza Otsutsuki',
                     style: TextStyle(
-                        fontSize: 17.sp,
+                        fontSize: 20.sp,
                         fontWeight: FontWeight.w600,
                         color: Colors.black),
                   ),
@@ -79,7 +81,7 @@ class _OrderReceivedState extends State<OrderReceived> {
                     ),
                     child: Text(
                       'Motor',
-                      style: TextStyle(fontSize: 12.sp, color: Colors.white),
+                      style: TextStyle(fontSize: 15.sp, color: Colors.white),
                       textAlign: TextAlign.center,
                     ),
                   ),
@@ -124,7 +126,7 @@ class _OrderReceivedState extends State<OrderReceived> {
                 'LOKASI TUJUAN',
                 style: TextStyle(
                     color: Colors.black26,
-                    fontSize: 12.sp,
+                    fontSize: 15.sp,
                     fontWeight: FontWeight.bold),
               ),
             ),
@@ -133,7 +135,7 @@ class _OrderReceivedState extends State<OrderReceived> {
               child: Text('Komplek Perdana Mandiri',
                   style: TextStyle(
                       color: Colors.black,
-                      fontSize: 15.sp,
+                      fontSize: 18.sp,
                       fontWeight: FontWeight.w400)),
             ),
           ),
@@ -152,7 +154,7 @@ class _OrderReceivedState extends State<OrderReceived> {
                 'CATATAN',
                 style: TextStyle(
                     color: Colors.black26,
-                    fontSize: 12.sp,
+                    fontSize: 15.sp,
                     fontWeight: FontWeight.bold),
               ),
             ),
@@ -162,7 +164,7 @@ class _OrderReceivedState extends State<OrderReceived> {
                   'Diseberang toko Anang Jamal, Motor Scope warna hitam',
                   style: TextStyle(
                       color: Colors.black,
-                      fontSize: 15.sp,
+                      fontSize: 18.sp,
                       fontWeight: FontWeight.w400)),
             ),
           ),
@@ -183,7 +185,7 @@ class _OrderReceivedState extends State<OrderReceived> {
                     'ESTIMASI BIAYA',
                     style: TextStyle(
                         color: Colors.black26,
-                        fontSize: 12.sp,
+                        fontSize: 15.sp,
                         fontWeight: FontWeight.bold),
                   ),
                   IconButton(
@@ -258,13 +260,13 @@ class _OrderReceivedState extends State<OrderReceived> {
                         child: Text('Harga Tambal Per Lubang',
                             style: TextStyle(
                                 color: Colors.black,
-                                fontSize: 15.sp,
+                                fontSize: 18.sp,
                                 fontWeight: FontWeight.w400)),
                       ),
                       Text('Rp 20.000',
                           style: TextStyle(
                               color: Colors.black,
-                              fontSize: 15.sp,
+                              fontSize: 18.sp,
                               fontWeight: FontWeight.bold)),
                     ],
                   ),
@@ -278,13 +280,13 @@ class _OrderReceivedState extends State<OrderReceived> {
                         child: Text('Biaya Perjalanan',
                             style: TextStyle(
                                 color: Colors.black,
-                                fontSize: 15.sp,
+                                fontSize: 18.sp,
                                 fontWeight: FontWeight.w400)),
                       ),
                       Text('Rp 10.000',
                           style: TextStyle(
                               color: Colors.black,
-                              fontSize: 15.sp,
+                              fontSize: 18.sp,
                               fontWeight: FontWeight.bold)),
                       Divider(
                         thickness: 1,
@@ -303,13 +305,13 @@ class _OrderReceivedState extends State<OrderReceived> {
                         child: Text('Total Estimasi Biaya',
                             style: TextStyle(
                                 color: Colors.black,
-                                fontSize: 15.sp,
+                                fontSize: 18.sp,
                                 fontWeight: FontWeight.w400)),
                       ),
                       Text('Rp 30.000',
                           style: TextStyle(
                               color: Colors.black,
-                              fontSize: 15.sp,
+                              fontSize: 18.sp,
                               fontWeight: FontWeight.bold)),
                       Divider(
                         thickness: 1,
@@ -319,15 +321,15 @@ class _OrderReceivedState extends State<OrderReceived> {
                     ],
                   ),
                   SizedBox(
-                    height: 20.h,
+                    height: 15.h,
                     child: Align(
                       alignment: Alignment.bottomCenter,
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Container(
-                            width: 42.5.w,
-                            height: 10.h,
+                            width: 28.w,
+                            height: 9.h,
                             decoration: BoxDecoration(
                               color: const Color(0xFF4CE5B1),
                               borderRadius: BorderRadius.circular(11),
@@ -339,25 +341,62 @@ class _OrderReceivedState extends State<OrderReceived> {
                                 Icon(
                                   Tambalin.contact,
                                   color: Colors.white,
-                                  size: 25.sp,
+                                  size: 23.sp,
                                 ),
                                 const SizedBox(height: 5),
                                 Text(
                                   'Telepon',
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 12.sp,
+                                    fontSize: 15.sp,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                               ],
                             ),
                           ),
+                          InkWell(
+                            onTap: () {
+                              Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: ((context) =>
+                                          const OrderRoomchat())));
+                            },
+                            child: Container(
+                              width: 28.w,
+                              height: 9.h,
+                              decoration: BoxDecoration(
+                                color: const Color(0xFF4252FF),
+                                borderRadius: BorderRadius.circular(11),
+                              ),
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.center,
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                children: [
+                                  Icon(
+                                    Tambalin.message,
+                                    color: Colors.white,
+                                    size: 23.sp,
+                                  ),
+                                  const SizedBox(height: 5),
+                                  Text(
+                                    'Kirim Pesan',
+                                    style: TextStyle(
+                                      color: Colors.white,
+                                      fontSize: 15.sp,
+                                      fontWeight: FontWeight.bold,
+                                    ),
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ),
                           Container(
-                            width: 42.5.w,
-                            height: 10.h,
+                            width: 28.w,
+                            height: 9.h,
                             decoration: BoxDecoration(
-                              color: const Color(0xFF4252FF),
+                              color: const Color(0xFFBEC2CE),
                               borderRadius: BorderRadius.circular(11),
                             ),
                             child: Column(
@@ -365,50 +404,22 @@ class _OrderReceivedState extends State<OrderReceived> {
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
                                 Icon(
-                                  Tambalin.message,
+                                  Tambalin.trash,
                                   color: Colors.white,
-                                  size: 25.sp,
+                                  size: 23.sp,
                                 ),
                                 const SizedBox(height: 5),
                                 Text(
-                                  'Kirim Pesan',
+                                  'Batalkan',
                                   style: TextStyle(
                                     color: Colors.white,
-                                    fontSize: 12.sp,
+                                    fontSize: 15.sp,
                                     fontWeight: FontWeight.bold,
                                   ),
                                 ),
                               ],
                             ),
                           ),
-                          // Container(
-                          //   width: 25.w,
-                          //   height: 8.h,
-                          //   decoration: BoxDecoration(
-                          //     color: Color(0xFFBEC2CE),
-                          //     borderRadius: BorderRadius.circular(11),
-                          //   ),
-                          //   child: Column(
-                          //     mainAxisAlignment: MainAxisAlignment.center,
-                          //     crossAxisAlignment: CrossAxisAlignment.center,
-                          //     children: [
-                          //       Icon(
-                          //         Tambalin.trash,
-                          //         color: Colors.white,
-                          //         size: 25.sp,
-                          //       ),
-                          //       const SizedBox(height: 5),
-                          //       Text(
-                          //         'Batalkan',
-                          //         style: TextStyle(
-                          //           color: Colors.white,
-                          //           fontSize: 12.sp,
-                          //           fontWeight: FontWeight.bold,
-                          //         ),
-                          //       ),
-                          //     ],
-                          //   ),
-                          // ),
                         ],
                       ),
                     ),

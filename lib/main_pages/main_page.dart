@@ -27,7 +27,6 @@ class _MainPageState extends State<MainPage> {
       }
     });
   } //Biar Overlay ditampilkan setelah verifikasi
-  
 
   void showOverlay(BuildContext context) {
     overlayEntry = OverlayEntry(
@@ -92,7 +91,6 @@ class _MainPageState extends State<MainPage> {
         return true;
       },
       child: Scaffold(
-        
           appBar: AppBar(
             elevation: 0.0,
             backgroundColor: Colors.white,
@@ -335,13 +333,13 @@ class _MainPageState extends State<MainPage> {
                   child: Row(
                     children: [
                       Container(
-                        margin: EdgeInsets.only(right: 10.0.sp),
-                        child: const CircleAvatar(
+                        margin: EdgeInsets.only(right: 15.0.sp),
+                        child: CircleAvatar(
                           radius: 24,
                           backgroundColor: Colors.black26,
                           child: Icon(
                             Icons.person,
-                            size: 45,
+                            size: 25.sp,
                             color: Colors.white,
                           ),
                         ),
@@ -366,12 +364,12 @@ class _MainPageState extends State<MainPage> {
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
                             Text(
-                              'Rp 100.000',
+                              'Rp 50.000',
                               style: TextStyle(
                                   fontSize: 20.sp, fontWeight: FontWeight.w600),
                             ),
                             Text(
-                              'Didapatkan',
+                              'Saldo Anda',
                               style: TextStyle(
                                   fontSize: 15.sp, color: Colors.grey),
                             )
@@ -398,7 +396,7 @@ class _MainPageState extends State<MainPage> {
                           Icon(
                             Tambalin.time,
                             color: Colors.white,
-                            size: 23.sp,
+                            size: 22.sp,
                           ),
                           Text(
                             '10.30',
@@ -420,7 +418,7 @@ class _MainPageState extends State<MainPage> {
                           Icon(
                             Tambalin.speed,
                             color: Colors.white,
-                            size: 23.sp,
+                            size: 22.sp,
                           ),
                           Text(
                             '30 KM',
@@ -442,7 +440,7 @@ class _MainPageState extends State<MainPage> {
                           Icon(
                             Tambalin.order,
                             color: Colors.white,
-                            size: 23.sp,
+                            size: 22.sp,
                           ),
                           Text(
                             '10',

@@ -53,7 +53,7 @@ class _OrderScreenState extends State<OrderScreen> {
                     Text(
                       'Mirza Otsutsuki',
                       style: TextStyle(
-                          fontSize: 17.sp,
+                          fontSize: 20.sp,
                           fontWeight: FontWeight.w600,
                           color: Colors.black),
                     ),
@@ -68,7 +68,7 @@ class _OrderScreenState extends State<OrderScreen> {
                       ),
                       child: Text(
                         'Motor',
-                        style: TextStyle(fontSize: 12.sp, color: Colors.white),
+                        style: TextStyle(fontSize: 15.sp, color: Colors.white),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -108,11 +108,11 @@ class _OrderScreenState extends State<OrderScreen> {
           ),
           Divider(
             thickness: 1,
-            height: 0,
+            height: 20,
             color: Colors.grey[100],
           ),
           SizedBox(
-            height: 20.h,
+            height: 15.h,
           ),
           CustomButton(
               color: tambalinPrimary,
@@ -162,7 +162,7 @@ class OrderScreenList extends StatelessWidget {
           leading: Icon(
             icon,
             color: iconColor,
-            size: 25.sp,
+            size: 23.sp,
           ),
           title: Container(
             margin: const EdgeInsets.only(top: 10, bottom: 10),
@@ -170,14 +170,14 @@ class OrderScreenList extends StatelessWidget {
               subtitle.toUpperCase(),
               style: TextStyle(
                   color: Colors.black26,
-                  fontSize: 12.sp,
+                  fontSize: 16.sp,
                   fontWeight: FontWeight.bold),
             ),
           ),
           subtitle: Text(title,
               style: TextStyle(
                   color: Colors.black,
-                  fontSize: 15.sp,
+                  fontSize: 18.sp,
                   fontWeight: FontWeight.w400)),
         )
       ],
