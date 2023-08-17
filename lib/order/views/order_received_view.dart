@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:tambalin_app/order/views/tracking/order_tracking_view.dart';
 import 'package:tambalin_app/widgets/buttons/button.dart';
 import 'package:tambalin_app/order/views/detail/chat/order_chat_view.dart';
 import 'package:tambalin_app/utlis/color_pallete.dart';
@@ -87,27 +88,6 @@ class _OrderReceivedState extends State<OrderReceived> {
                   ),
                 ],
               ),
-              // Expanded(
-              //   child: Column(
-              //     crossAxisAlignment: CrossAxisAlignment.end,
-              //     children: [
-              //       Text(
-              //         'Estimasi Biaya',
-              //         style: TextStyle(
-              //             fontSize: 13.sp,
-              //             fontWeight: FontWeight.w500,
-              //             color: Colors.grey),
-              //       ),
-              //       Text(
-              //         'Rp. 25.000',
-              //         style: TextStyle(
-              //           fontSize: 17.sp,
-              //           fontWeight: FontWeight.bold,
-              //         ),
-              //       ),
-              //     ],
-              //   ),
-              // ),
               SizedBox(
                 width: 5.w,
               )
@@ -433,7 +413,9 @@ class _OrderReceivedState extends State<OrderReceived> {
       bottomNavigationBar: Material(
         color: const Color(0xffff8906),
         child: InkWell(
-          onTap: () {},
+          onTap: () {
+            Navigator.push(context, MaterialPageRoute(builder: ((context) => const OrderTrackingView())));
+          },
           child: SizedBox(
             height: 12.h,
             width: double.infinity,
