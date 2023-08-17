@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:tambalin_app/utlis/color_pallete.dart';
 
@@ -33,12 +32,12 @@ class _CustomButtonState extends State<CustomButton> {
         ),
         child: Text(
           widget.text ?? 'Button',
-          style: GoogleFonts.roboto(
-            textStyle: TextStyle(
+          style: 
+            TextStyle(
                 fontSize: 18.sp,
                 fontWeight: FontWeight.w500,
                 color: Colors.white),
-          ),
+          
         ),
       ),
     );

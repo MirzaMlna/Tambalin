@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:tambalin_app/utlis/color_pallete.dart';
 
-import '../utlis/tambalin_icons.dart';
+import '../../../../../utlis/tambalin_icons.dart';
 
 Widget whenOnline = Row(
   children: [

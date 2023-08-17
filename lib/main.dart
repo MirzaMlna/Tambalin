@@ -2,8 +2,9 @@
 
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:tambalin_app/auth_pages/sign_in.dart';
+
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:tambalin_app/auth/main/views/signin_view.dart';
 
 void main() {
   runApp(const MyApp());

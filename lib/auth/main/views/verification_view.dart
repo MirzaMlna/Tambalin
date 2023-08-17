@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_verification_code/flutter_verification_code.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:tambalin_app/main_pages/main_page.dart';
+import 'package:tambalin_app/main/views/main_page_view.dart';
 
-import '../utlis/color_pallete.dart';
-import '../common_widgets/custom_button.dart';
+import '../../../../../utlis/color_pallete.dart';
+import '../../../../../widgets/buttons/button.dart';
 
 class PhoneVerify extends StatefulWidget {
   const PhoneVerify({super.key});
