@@ -2,8 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:flutter/services.dart';
-
-import 'package:tambalin_app/auth/main/views/verification_view.dart';
+import 'package:tambalin_app/auth/views/verification_view.dart';
 import 'package:tambalin_app/utlis/color_pallete.dart';
 import '../../../../widgets/buttons/button.dart';
 

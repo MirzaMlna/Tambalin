@@ -4,8 +4,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:tambalin_app/main/views/main_page_view.dart';
 
-import '../../../../../utlis/color_pallete.dart';
-import '../../../../../widgets/buttons/button.dart';
+import '../../../../utlis/color_pallete.dart';
+import '../../../../widgets/buttons/button.dart';
 
 class PhoneVerify extends StatefulWidget {
   const PhoneVerify({super.key});

@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:tambalin_app/main/widgets/onilne_offline_widget.dart';
 import 'package:tambalin_app/settings/views/setiings_view.dart';
 import 'package:tambalin_app/widgets/buttons/button.dart';
 import 'package:tambalin_app/order/views/order_view.dart';
 import 'package:tambalin_app/utlis/color_pallete.dart';
-import 'package:tambalin_app/app/pages/auth/main/widgets/onilne_offline_widget.dart';
-
 import '../../../../../utlis/tambalin_icons.dart';
 
 class MainPage extends StatefulWidget {
