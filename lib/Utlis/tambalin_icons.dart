@@ -18,6 +18,8 @@
 import 'package:flutter/widgets.dart';
 
 class Tambalin {
+  
+
   Tambalin._();
 
   static const _kFontFam = 'Tambalin';
