@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:tambalin_app/order/views/detail/payment/add_payment_view.dart';
 import 'package:tambalin_app/utlis/color_pallete.dart';
 import 'package:tambalin_app/utlis/tambalin_icons.dart';
 import 'package:tambalin_app/widgets/buttons/button.dart';
@@ -22,51 +23,6 @@ class _OrderTrackingViewState extends State<OrderTrackingView> {
             height: 100.h,
             color: Colors.grey,
           ),
-          Positioned(
-              top: 50,
-              left: 10,
-              child: CircleAvatar(
-                backgroundColor: Colors.white,
-                child: InkWell(
-                  splashColor: Colors.blue,
-                  borderRadius: BorderRadius.circular(8.0),
-                  onTap: () => Navigator.pop(context),
-                  child: Icon(
-                    Tambalin.arrow_left_navgation,
-                    size: 20.sp,
-                    color: tambalinBlack,
-                  ),
-                ),
-              )),
-          Positioned(
-              bottom: 35,
-              right: 10,
-              child: CircleAvatar(
-                radius: 20.sp,
-                backgroundColor: Colors.white,
-                child: InkWell(
-                  onTap: () => Navigator.pop(context),
-                  child: Icon(
-                    Icons.gps_fixed,
-                    size: 23.sp,
-                    color: tambalinBlack,
-                  ),
-                ),
-              )),
-          Positioned(
-              bottom: 30,
-              left: 80,
-              child: SizedBox(
-                height: 6.h,
-                width: 60.w,
-                child: CustomButton(
-                  color: tambalinPrimary,
-                  onTap: () {
-                    //
-                  },
-                  text: 'Sudah Di Lokasi',
-                ),
-              )),
           Positioned(
               top: 120,
               left: 20,
@@ -133,7 +89,55 @@ class _OrderTrackingViewState extends State<OrderTrackingView> {
                     ),
                   ],
                 ),
-              ))
+              )),
+          Positioned(
+              top: 50,
+              left: 10,
+              child: CircleAvatar(
+                backgroundColor: Colors.white,
+                child: InkWell(
+                  splashColor: Colors.blue,
+                  borderRadius: BorderRadius.circular(8.0),
+                  onTap: () => Navigator.pop(context),
+                  child: Icon(
+                    Tambalin.arrow_left_navgation,
+                    size: 20.sp,
+                    color: tambalinBlack,
+                  ),
+                ),
+              )),
+          Positioned(
+              bottom: 35,
+              right: 10,
+              child: CircleAvatar(
+                radius: 20.sp,
+                backgroundColor: Colors.white,
+                child: InkWell(
+                  onTap: () => Navigator.pop(context),
+                  child: Icon(
+                    Icons.gps_fixed,
+                    size: 23.sp,
+                    color: tambalinBlack,
+                  ),
+                ),
+              )),
+          Positioned(
+              bottom: 30,
+              left: 80,
+              child: SizedBox(
+                height: 6.h,
+                width: 60.w,
+                child: CustomButton(
+                  color: tambalinPrimary,
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => const AddPaymentView())));
+                  },
+                  text: 'Sudah Di Lokasi',
+                ),
+              )),
         ],
       ),
     );
