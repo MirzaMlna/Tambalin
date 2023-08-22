@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'package:tambalin_app/settings/views/setiings_view.dart';
+import 'package:tambalin_app/settings/views/settings_view.dart';
 import 'package:tambalin_app/utlis/tambalin_icons.dart';
 
 class Settings {

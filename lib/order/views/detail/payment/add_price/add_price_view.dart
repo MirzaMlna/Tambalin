@@ -48,6 +48,7 @@ class _AddPriceViewState extends State<AddPriceView> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              
               Text(
                 'HARGA PERBAIKAN',
                 style: TextStyle(
@@ -146,7 +147,7 @@ class _AddPriceViewState extends State<AddPriceView> {
                       width: 1.0,
                     ),
                   ),
-                  hintText: 'Ada 2 Lubang Di Ban',
+                  hintText: 'Ada 1 Lubang Di Ban',
                   hintStyle: TextStyle(
                     color: Colors.grey,
                     fontSize: 18.sp,

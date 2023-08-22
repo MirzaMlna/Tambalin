@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
+import 'package:tambalin_app/history/history_view.dart';
 import 'package:tambalin_app/main/widgets/onilne_offline_widget.dart';
 import 'package:tambalin_app/notfication/views/notification_view.dart';
-import 'package:tambalin_app/settings/views/setiings_view.dart';
+import 'package:tambalin_app/settings/views/settings_view.dart';
 import 'package:tambalin_app/widgets/buttons/button.dart';
 import 'package:tambalin_app/order/views/order_view.dart';
 import 'package:tambalin_app/utlis/color_pallete.dart';
@@ -210,7 +211,12 @@ class _MainPageState extends State<MainPage> {
                     style:
                         TextStyle(fontWeight: FontWeight.w600, fontSize: 15.sp),
                   ),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => const HistoryView())));
+                  },
                 ),
                 ListTile(
                   leading: Icon(
