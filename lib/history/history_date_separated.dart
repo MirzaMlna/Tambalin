@@ -1,9 +1,6 @@
-
-
 class HistoryDate {
   String day;
   int date;
-
 
   HistoryDate(
     this.day,
