@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:tambalin_app/history/history_view.dart';
+import 'package:tambalin_app/history/views/history_view.dart';
 import 'package:tambalin_app/main/widgets/onilne_offline_widget.dart';
 import 'package:tambalin_app/notfication/views/notification_view.dart';
 import 'package:tambalin_app/settings/views/settings_view.dart';

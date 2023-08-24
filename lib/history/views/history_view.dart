@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:tambalin_app/history/history_date_separated.dart';
+import 'package:tambalin_app/history/views/history_date_separated.dart';
+import 'package:tambalin_app/history/widget/detail_widget.dart';
 import 'package:tambalin_app/utlis/color_pallete.dart';
 import 'package:tambalin_app/utlis/tambalin_icons.dart';
 
@@ -193,7 +194,7 @@ class _HistoryViewState extends State<HistoryView> {
                                   color: Colors.black54, fontSize: 16.sp),
                             ),
                             Text(
-                              'Rp.30,000',
+                              'Rp.60,000',
                               style: TextStyle(
                                   color: tambalinBlack,
                                   fontSize: 18.sp,
@@ -205,6 +206,201 @@ class _HistoryViewState extends State<HistoryView> {
                     ),
                   ),
                 ],
+              ),
+            ),
+            const HistoryCard(
+                userName: 'Gusti Randa',
+                price: 25000,
+                distance: 2.0,
+                location: 'Lorem ipsum dolor sit amet',
+                detail:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'),
+            const HistoryCard(
+                userName: 'Mirza Maulana',
+                price: 35000,
+                distance: 3.1,
+                location: 'Lorem ipsum dolor sit amet',
+                detail:
+                    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class HistoryCard extends StatelessWidget {
+  final String userName;
+  final int price;
+  final double distance;
+  final String location;
+  final String detail;
+  const HistoryCard({
+    super.key,
+    required this.userName,
+    required this.price,
+    required this.distance,
+    required this.location,
+    required this.detail,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    return InkWell(
+      onTap: () {
+        Navigator.push(context,
+            MaterialPageRoute(builder: ((context) => historyDetail(context))));
+      },
+      child: Container(
+        height: 31.h,
+        width: 90.w,
+        margin: const EdgeInsets.all(20.0),
+        decoration: BoxDecoration(
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(16),
+          boxShadow: [
+            BoxShadow(
+              color: Colors.black54.withOpacity(0.1),
+              spreadRadius: 0,
+              blurRadius: 5,
+              offset: const Offset(0, 1),
+            ),
+          ],
+        ),
+        child: Column(
+          children: [
+            Container(
+              decoration: const BoxDecoration(
+                color: Color(0xFFF1F2F6),
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(16),
+                    topRight: Radius.circular(16)),
+              ),
+              child: Row(
+                children: [
+                  Container(
+                    margin: const EdgeInsets.all(10.0),
+                    width: 12.w,
+                    height: 5.5.h,
+                    decoration: BoxDecoration(
+                      color: Colors.black26,
+                      borderRadius: BorderRadius.circular(11.0),
+                    ),
+                    child: Icon(
+                      Icons.person,
+                      color: Colors.white,
+                      size: 20.sp,
+                    ),
+                  ),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        userName,
+                        style: TextStyle(
+                            fontSize: 18.sp,
+                            fontWeight: FontWeight.w600,
+                            color: Colors.black),
+                      ),
+                      Container(
+                        width: 15.w,
+                        padding: const EdgeInsets.all(3.0),
+                        margin: const EdgeInsets.only(top: 4.0),
+                        decoration: const BoxDecoration(
+                          color: tambalinPrimary,
+                          borderRadius:
+                              BorderRadius.all(Radius.elliptical(80, 100)),
+                        ),
+                        child: Text(
+                          'Motor',
+                          style:
+                              TextStyle(fontSize: 12.sp, color: Colors.white),
+                          textAlign: TextAlign.center,
+                        ),
+                      ),
+                    ],
+                  ),
+                  Flexible(
+                    child: Align(
+                      alignment: Alignment.centerRight,
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: [
+                          Text(
+                            'Rp.$price',
+                            style: TextStyle(
+                                fontSize: 18.sp,
+                                fontWeight: FontWeight.w600,
+                                color: Colors.black),
+                          ),
+                          Text(
+                            '$distance Km',
+                            style: TextStyle(
+                                fontSize: 18.sp, color: Colors.black45),
+                            textAlign: TextAlign.center,
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    width: 5.w,
+                  )
+                ],
+              ),
+            ),
+            Divider(
+              thickness: 1,
+              height: 0,
+              color: Colors.grey[100],
+            ),
+            ListTile(
+              title: Container(
+                margin: const EdgeInsets.only(top: 10),
+                child: Text(
+                  'LOKASI',
+                  style: TextStyle(
+                      color: Colors.black26,
+                      fontSize: 15.sp,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+              subtitle: Container(
+                margin: const EdgeInsets.only(top: 10, bottom: 10),
+                child: Text(location,
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 18.sp,
+                        fontWeight: FontWeight.w400)),
+              ),
+            ),
+            Divider(
+              thickness: 1,
+              height: 0,
+              color: Colors.grey[100],
+            ),
+            ListTile(
+              title: Container(
+                margin: const EdgeInsets.only(
+                  top: 10,
+                ),
+                child: Text(
+                  'DETAIL KERUSAKAN',
+                  style: TextStyle(
+                      color: Colors.black26,
+                      fontSize: 15.sp,
+                      fontWeight: FontWeight.bold),
+                ),
+              ),
+              subtitle: Container(
+                margin: const EdgeInsets.only(top: 10),
+                child: Text(detail,
+                    maxLines: 1,
+                    overflow: TextOverflow.ellipsis,
+                    style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 18.sp,
+                        fontWeight: FontWeight.w400)),
               ),
             ),
           ],

@@ -48,7 +48,6 @@ class _AddPriceViewState extends State<AddPriceView> {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              
               Text(
                 'HARGA PERBAIKAN',
                 style: TextStyle(
@@ -126,8 +125,8 @@ class _AddPriceViewState extends State<AddPriceView> {
                 height: 1.h,
               ),
               TextFormField(
-                keyboardType: TextInputType.multiline,
-                maxLines: 5,
+                
+                maxLength: 60,
                 style: TextStyle(
                   fontSize: 18.sp,
                 ),
