@@ -278,7 +278,60 @@ class _MainPageState extends State<MainPage> {
                     style:
                         TextStyle(fontWeight: FontWeight.w600, fontSize: 15.sp),
                   ),
-                  onTap: () {},
+                  onTap: () {
+                    showDialog(
+                      context: context,
+                      builder: (BuildContext context) {
+                        return AlertDialog(
+                          scrollable: true,
+                          title: Center(
+                              child: Text(
+                            'Keluar Dari Akun',
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 18.sp),
+                          )),
+                          content: Column(
+                            children: [
+                              Text(
+                                'Apakah anda yakin ingin keluar dari akun?',
+                                textAlign: TextAlign.center,
+                                style: TextStyle(
+                                    fontSize: 18.sp, color: Colors.black),
+                              ),
+                              Row(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Container(
+                                    margin: const EdgeInsets.only(top: 10),
+                                    height: 5.h,
+                                    width: 30.w,
+                                    child: CustomButton(
+                                        color: tambalinPrimary,
+                                        text: 'Batal',
+                                        onTap: () {
+                                          Navigator.pop(context);
+                                        }),
+                                  ),
+                                  Container(
+                                    margin: const EdgeInsets.only(top: 10),
+                                    height: 5.h,
+                                    width: 30.w,
+                                    child: CustomButton(
+                                        color: Colors.grey[350],
+                                        text: 'Keluar',
+                                        onTap: () {
+                                          Navigator.of(context).popUntil((route) => route.isFirst);
+                                        }),
+                                  ),
+                                ],
+                              )
+                            ],
+                          ),
+                        );
+                      },
+                    );
+                  },
                 ),
               ],
             ),

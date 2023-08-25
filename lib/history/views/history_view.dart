@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:tambalin_app/history/views/history_date_separated.dart';
-import 'package:tambalin_app/history/widget/detail_widget.dart';
+import 'package:tambalin_app/history/widget/history_detail.dart';
 import 'package:tambalin_app/utlis/color_pallete.dart';
 import 'package:tambalin_app/utlis/tambalin_icons.dart';
 

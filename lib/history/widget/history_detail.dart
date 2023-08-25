@@ -10,7 +10,7 @@ Widget historyDetail(BuildContext context) {
       child: Container(
         width: 100.w,
         height: 80.h,
-        margin: EdgeInsets.fromLTRB(15, 25, 15, 25),
+        margin: const EdgeInsets.fromLTRB(15, 25, 15, 25),
         decoration: BoxDecoration(
             color: Colors.white, borderRadius: BorderRadius.circular(20)),
         child: Column(
