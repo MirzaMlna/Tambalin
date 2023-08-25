@@ -161,28 +161,6 @@ class _MainPageState extends State<MainPage> {
                                 fontWeight: FontWeight.w600,
                                 color: Colors.white),
                           ),
-                          Container(
-                            alignment: Alignment.center,
-                            padding: const EdgeInsets.all(3.0),
-                            margin: const EdgeInsets.only(top: 4.0),
-                            decoration: const BoxDecoration(
-                              color: Colors.white,
-                              borderRadius:
-                                  BorderRadius.all(Radius.elliptical(80, 100)),
-                            ),
-                            child: Row(
-                              children: [
-                                const Icon(Tambalin.favorites,
-                                    color: tambalinPrimary),
-                                Text(
-                                  'Gold Member',
-                                  style: TextStyle(
-                                      fontSize: 15.sp,
-                                      color: tambalinSecondary),
-                                ),
-                              ],
-                            ),
-                          ),
                         ],
                       ),
                     ],
