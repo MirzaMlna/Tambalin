@@ -4,6 +4,7 @@ import 'package:tambalin_app/history/views/history_view.dart';
 import 'package:tambalin_app/main/widgets/onilne_offline_widget.dart';
 import 'package:tambalin_app/notfication/views/notification_view.dart';
 import 'package:tambalin_app/settings/views/settings_view.dart';
+import 'package:tambalin_app/wallet/views/my_wallet_view.dart';
 import 'package:tambalin_app/widgets/buttons/button.dart';
 import 'package:tambalin_app/order/views/order_view.dart';
 import 'package:tambalin_app/utlis/color_pallete.dart';
@@ -198,7 +199,12 @@ class _MainPageState extends State<MainPage> {
                     style:
                         TextStyle(fontWeight: FontWeight.w600, fontSize: 15.sp),
                   ),
-                  onTap: () {},
+                  onTap: () {
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: ((context) => const MyWalletView())));
+                  },
                 ),
                 ListTile(
                   leading: Icon(
@@ -321,7 +327,8 @@ class _MainPageState extends State<MainPage> {
                                         color: Colors.grey[350],
                                         text: 'Keluar',
                                         onTap: () {
-                                          Navigator.of(context).popUntil((route) => route.isFirst);
+                                          Navigator.of(context).popUntil(
+                                              (route) => route.isFirst);
                                         }),
                                   ),
                                 ],
