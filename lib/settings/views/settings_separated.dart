@@ -19,7 +19,7 @@ class Settings {
 }
 
 List settingItems = [
-  Settings(Colors.greenAccent, Tambalin.id_contact, 'Atur Dokumen',
+  Settings(Colors.greenAccent, Tambalin.id_contact, 'Lihat Dokumen',
       const DocumentView()),
   Settings(Colors.yellow[700], Tambalin.favorites, 'Penilaian',
       const SettingsPage()),

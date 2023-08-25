@@ -3,14 +3,14 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 import 'package:tambalin_app/utlis/color_pallete.dart';
 import 'package:tambalin_app/utlis/tambalin_icons.dart';
 
-class DocumentEditView extends StatefulWidget {
-  const DocumentEditView({super.key});
+class IDCardView extends StatefulWidget {
+  const IDCardView({super.key});
 
   @override
-  State<DocumentEditView> createState() => _DocumentEditViewState();
+  State<IDCardView> createState() => _IDCardViewState();
 }
 
-class _DocumentEditViewState extends State<DocumentEditView> {
+class _IDCardViewState extends State<IDCardView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -47,7 +47,7 @@ class _DocumentEditViewState extends State<DocumentEditView> {
             children: [
               Container(
                   width: 100.w,
-                  height: 32.h,
+                  height: 28.h,
                   margin: const EdgeInsets.only(bottom: 10.0),
                   padding: const EdgeInsets.only(top: 15.0),
                   decoration: BoxDecoration(
@@ -124,33 +124,21 @@ class _DocumentEditViewState extends State<DocumentEditView> {
                           ),
                         ],
                       ),
-                      InkWell(
-                        child: Text(
-                          'Ganti Foto',
-                          style: TextStyle(
-                            color: tambalinBlack,
-                            fontSize: 20.sp,
-                          ),
-                        ),
-                      )
                     ],
                   )),
-              const DocumentInput(
-                  title: 'Nomor Induk Keluarga',
-                  hint: 'Contoh : 6352220820034231',
-                  length: 16),
-              const DocumentInput(
-                  title: 'Nama Lengkap',
-                  hint: 'Contoh : Jajang Sujaman',
-                  length: 30),
-              const DocumentInput(
-                  title: 'Tanggal Lahir',
-                  hint: 'Contoh : 01/05/1997',
-                  length: 10),
-              const DocumentInput(
-                  title: 'Kecamatan',
-                  hint: 'Contoh : Banjarmasin Utara',
-                  length: 20),
+              const CardInformation(
+                  title: 'Nomor Induk Keluarga', value: '1827364518675435'),
+              const CardInformation(
+                  title: 'Nama Lengkap', value: 'Jajang Sujaman'),
+              const CardInformation(
+                  title: 'Tempat / Tanggal Lahir',
+                  value: 'Banjarmasin, 30-02-2000 SM'),
+              const CardInformation(
+                  title: 'Alamat',
+                  value: 'JL. PADAT KARYA KOMP. PURNAMA PERMAI III JLR 2A/26'),
+              const CardInformation(title: 'Kelurahan', value: 'Sultan Adam'),
+              const CardInformation(
+                  title: 'Kecamatan', value: 'Banjarmasin Utara'),
             ],
           ),
         ),
@@ -180,15 +168,14 @@ class _DocumentEditViewState extends State<DocumentEditView> {
   }
 }
 
-class DocumentInput extends StatelessWidget {
+class CardInformation extends StatelessWidget {
   final String title;
-  final String hint;
-  final int length;
-  const DocumentInput({
+  final String value;
+
+  const CardInformation({
     super.key,
     required this.title,
-    required this.hint,
-    required this.length,
+    required this.value,
   });
 
   @override
@@ -208,34 +195,27 @@ class DocumentInput extends StatelessWidget {
         SizedBox(
           height: 1.h,
         ),
-        TextFormField(
-          maxLength: length,
-          style: TextStyle(
-            fontSize: 18.sp,
+        Container(
+          width: 100.w,
+          height: 5.h,
+          padding: const EdgeInsets.all(10.0),
+          margin: const EdgeInsets.only(bottom: 10.0),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(8.0),
+            border: Border.all(
+              color: Colors.black12,
+              width: 2.0,
+            ),
           ),
-          cursorColor: tambalinPrimary,
-          decoration: InputDecoration(
-            enabledBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(11),
-              borderSide: const BorderSide(
-                color: Color.fromARGB(10, 0, 0, 0),
-                width: 2.0,
-              ),
-            ),
-            focusedBorder: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(11.0),
-              borderSide: const BorderSide(
-                color: tambalinPrimary,
-                width: 1.0,
-              ),
-            ),
-            hintText: hint,
-            hintStyle: TextStyle(
-              color: Colors.grey,
+          child: Text(
+            value,
+            overflow: TextOverflow.ellipsis,
+            style: TextStyle(
+              color: Colors.black26,
               fontSize: 18.sp,
             ),
           ),
-        ),
+        )
       ],
     );
   }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:tambalin_app/settings/views/document/views/document_edit_view.dart';
+import 'package:tambalin_app/settings/views/document/views/id_card_view.dart';
 import 'package:tambalin_app/utlis/color_pallete.dart';
 import 'package:tambalin_app/utlis/tambalin_icons.dart';
 
@@ -29,7 +29,7 @@ class _DocumentViewState extends State<DocumentView> {
               width: 2.w,
             ),
             const Text(
-              'Atur Dokumen',
+              'Lihat Dokumen',
               style: TextStyle(
                 color: tambalinBlack,
                 fontWeight: FontWeight.w600,
@@ -50,7 +50,7 @@ class _DocumentViewState extends State<DocumentView> {
                 Navigator.push(
                     context,
                     MaterialPageRoute(
-                        builder: (context) => const DocumentEditView()));
+                        builder: (context) => const IDCardView()));
               },
               child: Container(
                   width: 100.w,
