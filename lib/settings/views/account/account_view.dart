@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:tambalin_app/settings/account/account_edit_view.dart';
+import 'package:tambalin_app/settings/views/account/account_edit_view.dart';
 import 'package:tambalin_app/utlis/color_pallete.dart';
 
 class MyAccount extends StatefulWidget {

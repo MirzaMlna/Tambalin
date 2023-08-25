@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:settings_ui/settings_ui.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
-import 'package:tambalin_app/settings/account/account_view.dart';
+import 'package:tambalin_app/settings/views/account/account_view.dart';
 import 'package:tambalin_app/settings/views/settings_separated.dart';
 import 'package:tambalin_app/utlis/color_pallete.dart';
 

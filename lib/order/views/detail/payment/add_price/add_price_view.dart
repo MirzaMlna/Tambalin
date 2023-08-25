@@ -125,7 +125,6 @@ class _AddPriceViewState extends State<AddPriceView> {
                 height: 1.h,
               ),
               TextFormField(
-                
                 maxLength: 60,
                 style: TextStyle(
                   fontSize: 18.sp,

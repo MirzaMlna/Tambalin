@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:tambalin_app/settings/views/document/views/document_view.dart';
 
 import 'package:tambalin_app/settings/views/settings_view.dart';
 import 'package:tambalin_app/utlis/tambalin_icons.dart';
@@ -19,13 +20,13 @@ class Settings {
 
 List settingItems = [
   Settings(Colors.greenAccent, Tambalin.id_contact, 'Atur Dokumen',
-      const SettingsPage()),
+      const DocumentView()),
   Settings(Colors.yellow[700], Tambalin.favorites, 'Penilaian',
       const SettingsPage()),
   Settings(Colors.blueAccent, Tambalin.place, 'Bahasa', const SettingsPage()),
   Settings(Colors.lightBlueAccent, Tambalin.notification, 'Notifikasi',
       const SettingsPage()),
-  Settings(
-      Colors.grey, Tambalin.vip_center, 'Syarat & Ketentuan', const SettingsPage()),
+  Settings(Colors.grey, Tambalin.vip_center, 'Syarat & Ketentuan',
+      const SettingsPage()),
   Settings(Colors.pinkAccent, Icons.help, 'Hubungi Kami', const SettingsPage()),
 ];
